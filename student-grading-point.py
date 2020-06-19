@@ -91,6 +91,7 @@ class App:
                 units_this_sem + int(self.entry_2.get()))
         final_cgpa = str(final_cgpa)
         student_matric_number = str(self.entry_0.get())
+        # opening the Studen_grade_database.txt
         save_record = open("Student_grade_database.txt", "a")
         print("Matric Number: " + student_matric_number +
               "CGPA : " + final_cgpa
@@ -98,6 +99,7 @@ class App:
         a = ("\n\n Matric Number: " + student_matric_number +
              "\n\n CGPA : " + final_cgpa
              )
+        # saving the details into the .txt file
         save_record.write(a)
         tkinter.messagebox.showinfo("Done!!!", "Record saved successfully!!!"
                                     + "\n The CGPA for: " + str(student_matric_number) + " is " + str(final_cgpa)
